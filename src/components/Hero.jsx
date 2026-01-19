@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
@@ -36,10 +36,11 @@ const Hero = () => {
           <button className="px-8 py-3 rounded-full border border-white/40 hover:bg-white hover:text-black transition">
             Become a Guest
           </button>
-
-          <button className="px-8 py-3 rounded-full border border-white/40 hover:bg-white hover:text-black transition">
-            Contact us
-          </button>
+          <Link href="/contactus">
+            <button className="px-8 py-3 rounded-full border border-white/40 hover:bg-white hover:text-black transition">
+              Contact us
+            </button>
+          </Link>
         </div>
       </div>
     </section>

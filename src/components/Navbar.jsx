@@ -32,9 +32,9 @@ const Navbar = () => {
             <Link href="/profile" className=" hover:text-accent">
               Profile
             </Link>
-            <a href="#" className=" hover:text-accent">
+            <Link href="/shows" className=" hover:text-accent">
               Upcoming Shows
-            </a>
+            </Link>
             <a href="#" className=" hover:text-accent">
               Podcasts
             </a>
@@ -45,9 +45,11 @@ const Navbar = () => {
 
           {/* Right Side Stuff */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-primary text-white px-4 py-2 rounded hover:bg-white hover:text-primary transition">
-              Reach to us
-            </button>
+            <Link href="/contactus">
+              <button className="bg-primary text-white px-4 py-2 rounded hover:bg-white hover:text-primary transition">
+                Reach to us
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,12 +80,12 @@ const Navbar = () => {
           >
             Profile
           </Link>
-          <a
-            href="#"
+          <Link
+            href="/shows"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
           >
             Upcoming Shoes
-          </a>
+          </Link>
           <a
             href="#"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -97,9 +99,11 @@ const Navbar = () => {
             Stories
           </a>
           <div className="flex flex-col px-4 py-2 space-y-2">
-            <button className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-              Contactus
-            </button>
+            <Link href="/contactus">
+              <button className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                Contactus
+              </button>
+            </Link>
           </div>
         </div>
       )}
