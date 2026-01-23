@@ -1,0 +1,17 @@
+import { NextResponse } from "next/server";
+
+export function middleware(request) {
+  const token = request.cookies.get("admin_token");
+
+  // If no token → kick to login
+  if (!token) {
+    return NextResponse.redirect(new URL("/login", request.url));
+  }
+
+  // If token exists → allow
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ["/admin/:path*"],
+};

@@ -2,18 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative top-20 w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
         src="/assets/hero.png" // put image in /public folder
         alt="Adil Cast Podcast"
         fill
         priority
-        className="object-cover"
+        className="object-cover "
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/65"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl px-6 text-center text-white">
