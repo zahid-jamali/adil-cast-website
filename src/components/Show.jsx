@@ -26,7 +26,7 @@ const UpcomingShows = () => {
   };
 
   return (
-    <section className="bg-white py-28">
+    <section className="bg-white py-12">
       <div className="max-w-7xl mx-auto px-6">
         {/* SECTION HEADER */}
         <div className="max-w-3xl mb-20">

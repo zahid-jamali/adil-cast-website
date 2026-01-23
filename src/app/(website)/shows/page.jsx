@@ -68,7 +68,7 @@ export default function UpcomingShowsPage() {
       {/* FILTERS */}
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex justify-center gap-4 flex-wrap mb-16">
-          {categories.map((cat) => (
+          {/* {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveTab(cat)}
@@ -80,7 +80,7 @@ export default function UpcomingShowsPage() {
             >
               {cat}
             </button>
-          ))}
+          ))} */}
         </div>
 
         {/* LOADING */}

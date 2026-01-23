@@ -2,9 +2,13 @@ import Image from "next/image";
 
 const logos = [
   { name: "Roz News", src: "/assets/roz.png" },
+  { name: "Venus TV", src: "/assets/venus.jpg" },
+  { name: "Metro TV", src: "/assets/metro.jpg" },
+  { name: "Dharty News", src: "/assets/dharty.jpg" },
+  { name: "Awaz TV", src: "/assets/awaz.jpg" },
+  { name: "Pakistan Jounalists Authority", src: "/assets/pja.png" },
   { name: "Youtube", src: "/assets/youtube.jpg" },
   { name: "Pakistan Telecommunication Authority", src: "/assets/pta.png" },
-  { name: "Pakistan Jounalists Authority", src: "/assets/pja.png" },
 ];
 
 const MediaLogos = () => {

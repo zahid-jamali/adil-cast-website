@@ -3,6 +3,7 @@ import { connectDB } from "@/lib/connect";
 import { verifyToken } from "@/lib/verifyToken";
 import { uploadImage } from "@/lib/uploadImage";
 import Upcomingshow from "@/models/Upcomingshow";
+import { Readable } from "stream";
 
 // ✅ GET ALL
 export async function GET(request) {
@@ -17,7 +18,6 @@ export async function GET(request) {
   return NextResponse.json(shows);
 }
 
-// ✅ CREATE
 export async function POST(request) {
   const user = verifyToken(request);
   if (!user) {
@@ -39,7 +39,15 @@ export async function POST(request) {
     return NextResponse.json({ message: "Image is required" }, { status: 400 });
   }
 
-  // ☁️ Upload to Cloudinary
+  /* ===========================
+     🔁 Web Stream → Node Stream
+     =========================== */
+  const nodeStream = Readable.fromWeb(imageFile.stream());
+
+  // Patch stream back onto file object
+  imageFile.stream = () => nodeStream;
+
+  // ☁️ Upload (NO CHANGE to uploadImage.js)
   const uploaded = await uploadImage(imageFile);
 
   const show = await Upcomingshow.create({

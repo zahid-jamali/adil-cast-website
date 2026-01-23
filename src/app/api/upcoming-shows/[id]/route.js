@@ -68,7 +68,7 @@ export async function DELETE(request, context) {
   const { id } = await context.params;
 
   await connectDB();
-  await UpcomingShow.findByIdAndDelete(id);
+  await Upcomingshow.findByIdAndDelete(id);
 
   return NextResponse.json({ message: "Deleted successfully" });
 }

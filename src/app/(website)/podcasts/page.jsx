@@ -21,9 +21,13 @@ const guests = [
 
 const mediaLogos = [
   "/assets/roz.png",
-  "/assets/pta.png",
-  "/assets/youtube.jpg",
+  "/assets/venus.jpg",
+  "/assets/metro.jpg",
+  "/assets/dharty.jpg",
+  "/assets/awaz.jpg",
   "/assets/pja.png",
+  "/assets/youtube.jpg",
+  "/assets/pta.png",
 ];
 
 const PodcastPage = () => {
